@@ -16,7 +16,9 @@ const App = () => {
 
     const ciknum = companyname[newValue];
     setSelect(ciknum)
+    setError(false)
     setLoading(true);
+
 
     try {
 
