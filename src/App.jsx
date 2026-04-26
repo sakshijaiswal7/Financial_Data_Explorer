@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { companyname } from './utils/company'
 import { secapi } from './services/secApisedgar'
+import './app.css'
 
 const App = () => {
   const [company, setCompany] = useState('')
@@ -46,14 +47,26 @@ const App = () => {
   const liabilitiesData = gaap?.Liabilities?.units?.USD || [];
 
   return (
-    <div>
+
+    <div  className="container">
+     <div className="header">
+    <h1>FINANCIAL DATA EXPLORER</h1>
+    <h3>Sec Edgar Filings</h3>
+  </div>
+  <div className="search-box">
       <select value={company} onChange={handlechange}>
         <option value="">Select company</option>
         <option value="apple">Apple</option>
         <option value="tesla">Tesla</option>
         <option value="microsoft">Microsoft</option>
         <option value="google">Google</option>
+        <option value="amazon">Amazon</option>
+        <option value="meta">Meta</option>
+        <option value="netflix">Netflix</option>
+        <option value="nvidia">Nvidia</option>
+        <option value="adobe">Adobe</option>
       </select>
+      </div>
 
       {loading && <p>Loading...</p>}
       {error && <p>Please check your internet connection</p>}
