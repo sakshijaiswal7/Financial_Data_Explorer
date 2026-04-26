@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { companyname } from './utils/company'
 import { secapi } from './services/secApisedgar'
-import './app.css'
+import './App.css'
 
 const App = () => {
   const [company, setCompany] = useState('')
