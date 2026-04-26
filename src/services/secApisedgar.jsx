@@ -1,6 +1,6 @@
  export const secapi = async(ciknum)=>{
    try{
-     const data = await fetch(`https://your-backend.onrender.com/api/company/${ciknum}`,
+     const data = await fetch(`https://sec-backend-api.onrender.com/api/company/${ciknum}`,
     {
         headers:{
               "User-Agent": "sakshi8394@gmail.com" 
